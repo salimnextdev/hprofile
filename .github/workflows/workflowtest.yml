@@ -1,7 +1,7 @@
 nane: Hprpfile Actions
 on: workflow_dispatch
 jobs:
-  name: Testing:
+  Testing:
     runs-on: ubuntu-latest
       steps:
       name: Testing workflow
