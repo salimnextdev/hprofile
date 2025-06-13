@@ -1,10 +1,10 @@
 name: Hprofile Actions
-on: workflow_dispatch
+on: [push, workflow_dispatch]
 env:
   AWS_REGION: us-east-1
   ECR_REPSITORY: githubactionsapp
   ECR_SERVICE: vpro-act-tdef-service-tsfshdt5
-  ECR_CLUSTER: vproapp-act
+  ECS_CLUSTER: vproapp-act
   ECS_TASK_DEFINITION: aws-files/taskdeffile.json
   CONTAINER_NAME: vproapp
 jobs:
