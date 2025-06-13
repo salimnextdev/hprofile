@@ -3,7 +3,7 @@ on: [push, workflow_dispatch]
 env:
   AWS_REGION: us-east-1
   ECR_REPSITORY: githubactionsapp
-  ECR_SERVICE: vpro-act-tdef-service-tsfshdt5
+  ECS_SERVICE: vpro-act-tdef-service-tsfshdt5
   ECS_CLUSTER: vproapp-act
   ECS_TASK_DEFINITION: aws-files/taskdeffile.json
   CONTAINER_NAME: vproapp
@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Code checkout
         uses: actions/checkout@v4
-
+###
       - name: Maven test
         run: mvn test
 
