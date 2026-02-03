@@ -1,0 +1,15 @@
+name: Hprofile Actions
+on: workflow_dispatch
+jobs:
+    Testing:
+        runs-on: ubuuntu-latest
+        steps:
+            -  name: checkout code
+               uses: actions/checkout@v4
+
+            - name: Maven Test
+              run: mvn test
+            
+            - name: Checkstyle Analysis
+              run: mvn checkstyle:checkstyle
+              
