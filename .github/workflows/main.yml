@@ -61,7 +61,7 @@ jobs:
           sed -i "s/jdbc.url.*/jdbc.url=${{ secrets.RDS_ENDPOINT }}/" src/main/resources/application.properties
 
       - name: Build and publish to AWS ECR
-        uses: appleboy/docker-ecr-acyion@master
+        uses: appleboy/docker-ecr-action@master
         with:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
